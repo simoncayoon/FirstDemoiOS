@@ -11,6 +11,7 @@
 #import "MainTabCtl.h"
 #import "SysConfig.h"
 #import "SVProgressHUD.h"
+#import "MMProgressHUD.h"
 
 @interface MoreCtl ()
 
@@ -103,11 +104,43 @@
 
 -(void) upload{
 
-    [SVProgressHUD showWithStatus:@"正在上传通讯录" maskType:SVProgressHUDMaskTypeGradient];
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [NSThread sleepForTimeInterval:0.5];
-        [SVProgressHUD dismiss];
+//    [SVProgressHUD showWithStatus:@"正在上传通讯录" maskType:SVProgressHUDMaskTypeGradient];
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        [NSThread sleepForTimeInterval:0.5];
+//        [SVProgressHUD dismiss];
+//        
+//    });
+    BOOL autodismiss = YES;
+    
+    [MMProgressHUD showProgressWithStyle:MMProgressHUDProgressStyleRadial title:@"上传通讯录" status:nil];
+    [[MMProgressHUD sharedHUD] setProgressCompletion:^{
+        [MMProgressHUD dismissWithSuccess:@"上传成功!"];
+    }];
+    autodismiss = NO;
+    
+    double delayInSeconds = 1;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [MMProgressHUD updateProgress:0.33f];
         
+        double delayInSeconds = 0.5;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [MMProgressHUD updateProgress:0.55f];
+            
+            double delayInSeconds = 0.8;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [MMProgressHUD updateProgress:0.80f];
+                
+                double delayInSeconds = 1.5;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    [MMProgressHUD updateProgress:1.f];
+                    
+                });
+            });
+        });
     });
 }
 
