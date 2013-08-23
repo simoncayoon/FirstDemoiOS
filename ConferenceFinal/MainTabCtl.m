@@ -7,8 +7,6 @@
 //
 
 #import "MainTabCtl.h"
-//#import "ConfRoomCtl.h"
-//#import "CallBookCtl.h"
 #import "MoreCtl.h"
 #define TabBarHeight 55.0f
 
@@ -43,6 +41,7 @@ static MainTabCtl *mainTabCtl;
 @synthesize selectedViewController;
 @synthesize tabBarHidden;
 @synthesize tabBarTransparent;
+@synthesize confroom;
 
 -(id) initWithViewControllers:(NSArray *)vcs imageArray:(NSArray *)arr
 {
@@ -60,7 +59,7 @@ static MainTabCtl *mainTabCtl;
         mainTabCtl = self;
         
         //*****delegate**********//
-        ConfRoomCtl *confroom = [_viewControllers objectAtIndex:0];
+        confroom = [_viewControllers objectAtIndex:0];
         confroom.delegate = self;
         
         CallBookCtl *callbook = [_viewControllers objectAtIndex:1];
@@ -192,11 +191,16 @@ static MainTabCtl *mainTabCtl;
 - (void) showFromCallBook:(NSMutableDictionary *)dataArray
 {
     [self setSelectedIndex:0];
-    ConfRoomCtl* ctl = [_viewControllers objectAtIndex:0];
-    ctl.confAction.dataDic = dataArray;
-    ctl.confAction.arrayRow = [dataArray objectForKey:@"numlist"];
-    [ctl.confAction.tableView reloadData];
-    [ctl showList];
+//    ConfRoomCtl* ctl = [_viewControllers objectAtIndex:0];
+//    ctl.confAction.dataDic = dataArray;
+//    ctl.confAction.arrayRow = [dataArray objectForKey:@"numlist"];
+//    [ctl.confAction.tableView reloadData];
+//    [ctl showList];
+    //全局confroom
+    confroom.confAction.dataDic = dataArray;
+    confroom.confAction.arrayRow = [dataArray objectForKey:@"numlist"];
+    [confroom.confAction.tableView reloadData];
+    [confroom showList];
 }
 
 -(void) disableBtn{
@@ -214,5 +218,12 @@ static MainTabCtl *mainTabCtl;
     }
 }
 
+-(void) addNumber2List:(NSString *)str
+{
+    NSLog(@"In add the rows in section0 is :%d", confroom.confAction.arrayRow.count);
+    [confroom.confAction.arrayRow addObject:str];
+    [confroom.confAction addCell];
+    [confroom showList];
+}
 
 @end

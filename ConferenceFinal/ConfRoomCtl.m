@@ -38,7 +38,7 @@ bool actionCheckState = NO;
         _confAction = [[ActionListController alloc] init];
         
         //会议控制按钮
-        _conferenceControllBtn = [[UIButton alloc] initWithFrame:CGRectMake(230, 8, 80, 35)];
+        _conferenceControllBtn = [[UIButton alloc] initWithFrame:CGRectMake(235, 10, 80, 30)];
 
         [_conferenceControllBtn setBackgroundImage:[UIImage imageNamed:@"topiconbg.png"] forState:UIControlStateNormal];
         [_conferenceControllBtn setTitle:@"会控" forState:UIControlStateNormal];
@@ -115,6 +115,13 @@ bool actionCheckState = NO;
             [hud removeFromSuperview];
         }];
     }
+    
+    //Close the conferenceControll view
+    NSLog(@"%@", self.isShow ? @"YES": @"NO");
+    if(self.isShow){
+        self.isShow = !self.isShow;
+        [self.dropdownMenu.view setHidden:YES];
+    }
 }
 
 - (IBAction)toCallbook:(id)sender {
@@ -145,11 +152,17 @@ bool actionCheckState = NO;
             [hud removeFromSuperview];
         }];
     }else{
-        //在会议室窗口 绘制列表
-        [_confAction.arrayRow addObject:numEdit.text];
-        [_confAction addCell];
-        [self showList];
-        numEdit.text = nil;
+//        //在会议室窗口 绘制列表
+//        [_confAction.arrayRow addObject:numEdit.text];
+//        [_confAction addCell];
+//        [self showList];
+//        numEdit.text = nil;
+        //设置代理怎么样？
+        if([_delegate respondsToSelector:@selector(addNumber2List:)])
+        {
+            [_delegate addNumber2List:numEdit.text];
+            numEdit.text = nil;
+        }
     }
 }
 
@@ -163,7 +176,7 @@ bool actionCheckState = NO;
 
 - (void) _conferenceControllBtnClick:(UIButton *)btn
 {
-    
+    [self.dropdownMenu.view setHidden:NO];
     if(!self.isShow){
         self.isShow = YES;
         [UIView beginAnimations:@"ddd" context:nil];//设置动画 ddd为动画名称
@@ -171,7 +184,7 @@ bool actionCheckState = NO;
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut]; //setAnimationCurve来定义动画加速或减速方式
         [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.dropdownMenu.view cache:NO];
         [UIView setAnimationDelegate:self];  //设置动画的代理 实现动画执行前后的方法 在commitAnimation之前设置
-        _dropdownMenu.view.frame = CGRectMake(btn.frame.origin.x, btn.frame.size.height + btn.frame.origin.y - 5, btn.bounds.size.width, 120);
+        _dropdownMenu.view.frame = CGRectMake(btn.frame.origin.x, btn.frame.size.height + btn.frame.origin.y - 5, btn.bounds.size.width, 150);
         [UIView commitAnimations]; //提交动画
         
     }else {

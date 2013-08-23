@@ -15,6 +15,7 @@
 
 @optional
 -(void) showControllerOfTow;
+-(void) addNumber2List:(NSString *) str;
 
 @end
 

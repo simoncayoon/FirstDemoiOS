@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomTabBar.h"
-#import "ConfRoomCtl.h"
 #import "CallBookCtl.h"
 #import "RecentCtl.h"
+#import "ConfRoomCtl.h"
 
 @class UITabBarController;
 @protocol TabBarControllerDelegate;
@@ -34,6 +34,7 @@
 
 @property(nonatomic, readonly) UIViewController *selectedViewController;
 @property(nonatomic) NSUInteger selectedIndex;
+@property(nonatomic) ConfRoomCtl* confroom;
 
 // Apple is readonly
 @property (nonatomic, readonly) CustomTabBar *tabBar;

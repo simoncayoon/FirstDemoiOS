@@ -80,7 +80,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"the rows in section0 is :%d", _arrayRow.count);
     return [self.arrayRow count];
     
 }
@@ -132,6 +131,12 @@
     for (int i=0; i<_arrayRow.count; i++) {
         NSLog(@"the obj of index %d is :%@", i, [_arrayRow objectAtIndex:i]);
     }
+    /*在这里添加号码，
+    *当_arrayRow不为空的时候,怎样在已有的
+    *
+    *
+    *
+    **/
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[_arrayRow count] -1 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
