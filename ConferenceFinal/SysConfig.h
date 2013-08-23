@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UsrInfo.h"
+#import "SetPhoneNum.h"
+#import "PasswrdConfig.h"
+
 @class MoreCtl;
 
 @interface SysConfig : UIViewController
@@ -16,6 +20,15 @@
 }
 
 @property(nonatomic) MoreCtl *moreCtl;
+@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (retain, nonatomic) UsrInfo* myUsrInfo;
+@property (retain, nonatomic) PasswrdConfig* myPassConf;
+@property (retain, nonatomic) SetPhoneNum* mySetNum;
+
+
+
 - (IBAction)toUsrInfo:(id)sender;
 - (IBAction)toModifyPaswrd:(id)sender;
 - (IBAction)setHostNum:(id)sender;

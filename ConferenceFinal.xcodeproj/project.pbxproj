@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1811788117A7B4020062B9CB /* DropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811788017A7B4020062B9CB /* DropdownMenu.m */; };
 		182CF49817C5D83500DA8C05 /* MMVectorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CF48817C5D83500DA8C05 /* MMVectorImage.m */; };
 		182CF49917C5D83500DA8C05 /* MMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CF48A17C5D83500DA8C05 /* MMProgressHUD.m */; };
 		182CF49A17C5D83500DA8C05 /* MMProgressHUDOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CF48C17C5D83500DA8C05 /* MMProgressHUDOverlayView.m */; };
@@ -160,8 +159,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1811787F17A7B4020062B9CB /* DropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenu.h; sourceTree = "<group>"; };
-		1811788017A7B4020062B9CB /* DropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenu.m; sourceTree = "<group>"; };
 		182CF48717C5D83500DA8C05 /* MMVectorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMVectorImage.h; path = ../../../../Downloads/MMProgressHUD/Source/MMVectorImage.h; sourceTree = "<group>"; };
 		182CF48817C5D83500DA8C05 /* MMVectorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMVectorImage.m; path = ../../../../Downloads/MMProgressHUD/Source/MMVectorImage.m; sourceTree = "<group>"; };
 		182CF48917C5D83500DA8C05 /* MMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMProgressHUD.h; path = ../../../../Downloads/MMProgressHUD/Source/MMProgressHUD.h; sourceTree = "<group>"; };
@@ -616,8 +613,6 @@
 				1875F9FB17A2455C00D15D58 /* CustomAlertView.m */,
 				18A7C8EB17A4DC4600755F68 /* ContactListViewController.h */,
 				18A7C8EC17A4DC4600755F68 /* ContactListViewController.m */,
-				1811787F17A7B4020062B9CB /* DropdownMenu.h */,
-				1811788017A7B4020062B9CB /* DropdownMenu.m */,
 				18AB6CA617A8B885004B5179 /* DropMenuCtl.h */,
 				18AB6CA717A8B885004B5179 /* DropMenuCtl.m */,
 			);
@@ -905,7 +900,6 @@
 				189ECD5817A619F300665EE1 /* SetPhoneNum.m in Sources */,
 				189ECD5D17A61A5400665EE1 /* PasswrdConfig.m in Sources */,
 				189ECD6117A642C800665EE1 /* CustomLabel.m in Sources */,
-				1811788117A7B4020062B9CB /* DropdownMenu.m in Sources */,
 				18AB6CA817A8B885004B5179 /* DropMenuCtl.m in Sources */,
 				18A4855F17A9FBB400FA91A2 /* MBProgressHUD.m in Sources */,
 				1862A65717AFA6A2006CBBE4 /* TLAlertView.m in Sources */,

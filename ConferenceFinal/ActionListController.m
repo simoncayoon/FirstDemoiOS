@@ -90,11 +90,11 @@
     NSString * nul = [NSString stringWithFormat:@"cell%d",indexPath.row];
 
     CustomCell *cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nul];
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    if(self.dataDic == nil){
-        [cell.usrName setText:@"无姓名"];
-    }else{
+    cell.selectionStyle = UITableViewCellSelectionStyleGray; 
+    if(self.dataDic != nil){
         [cell.usrName setText:[[self.dataDic objectForKey:@"namelist"] objectAtIndex:[indexPath row]]];
+    }else{
+        [cell.usrName setText:@"无姓名"];
     }
     [cell.usrNum setText:[_arrayRow objectAtIndex:[indexPath row]]];
     [cell.headPortrait setImage:[_imgDic objectForKey:@"DefaultHeadPro"]];
@@ -131,12 +131,11 @@
     for (int i=0; i<_arrayRow.count; i++) {
         NSLog(@"the obj of index %d is :%@", i, [_arrayRow objectAtIndex:i]);
     }
-    /*在这里添加号码，
-    *当_arrayRow不为空的时候,怎样在已有的
-    *
-    *
-    *
+    /******在这里添加号码********，
+    *当由按钮添加号码的时候
+    *将姓名自动填充为“无姓名”
     **/
+    [[self.dataDic objectForKey:@"namelist"] addObject:@"无姓名"];
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[_arrayRow count] -1 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
