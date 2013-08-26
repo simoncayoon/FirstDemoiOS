@@ -135,7 +135,6 @@
 		18A2581C179CCEBB00626FEA /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2581B179CCEBB00626FEA /* CustomTabBar.m */; };
 		18A457AC17B3430D0080ACFB /* HelpDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A457AA17B3430D0080ACFB /* HelpDoc.m */; };
 		18A457AD17B3430D0080ACFB /* HelpDoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A457AB17B3430D0080ACFB /* HelpDoc.xib */; };
-		18A457B017B374990080ACFB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A457AF17B374990080ACFB /* SVProgressHUD.m */; };
 		18A457B217B39B1D0080ACFB /* LOGO_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A457B117B39B1D0080ACFB /* LOGO_07.png */; };
 		18A4855F17A9FBB400FA91A2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4855E17A9FBB400FA91A2 /* MBProgressHUD.m */; };
 		18A4FFBC17A0BB7F00A34611 /* ActionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4FFBB17A0BB7F00A34611 /* ActionListController.m */; };
@@ -145,6 +144,7 @@
 		18AB6CAC17A8EA88004B5179 /* again.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB6CA917A8EA88004B5179 /* again.png */; };
 		18AB6CAD17A8EA88004B5179 /* quxiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB6CAA17A8EA88004B5179 /* quxiao.png */; };
 		18AB6CAE17A8EA88004B5179 /* zjhybg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB6CAB17A8EA88004B5179 /* zjhybg.png */; };
+		18B0F93D17CB0500006CBB1A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B0F93C17CB0500006CBB1A /* SVProgressHUD.m */; };
 		18C8ACE8179E279800398C0E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8ACE7179E279800398C0E /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
@@ -317,8 +317,6 @@
 		18A457A917B3430D0080ACFB /* HelpDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDoc.h; sourceTree = "<group>"; };
 		18A457AA17B3430D0080ACFB /* HelpDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDoc.m; sourceTree = "<group>"; };
 		18A457AB17B3430D0080ACFB /* HelpDoc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpDoc.xib; sourceTree = "<group>"; };
-		18A457AE17B374990080ACFB /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = ../../SVProgressHUD.h; sourceTree = "<group>"; };
-		18A457AF17B374990080ACFB /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = ../../SVProgressHUD.m; sourceTree = "<group>"; };
 		18A457B117B39B1D0080ACFB /* LOGO_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGO_07.png; sourceTree = "<group>"; };
 		18A4855D17A9FBB400FA91A2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "../../../../Downloads/MBProgressHUD-master/MBProgressHUD.h"; sourceTree = "<group>"; };
 		18A4855E17A9FBB400FA91A2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "../../../../Downloads/MBProgressHUD-master/MBProgressHUD.m"; sourceTree = "<group>"; };
@@ -331,6 +329,8 @@
 		18AB6CA917A8EA88004B5179 /* again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = again.png; path = ../imageSource/again.png; sourceTree = "<group>"; };
 		18AB6CAA17A8EA88004B5179 /* quxiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quxiao.png; path = ../imageSource/quxiao.png; sourceTree = "<group>"; };
 		18AB6CAB17A8EA88004B5179 /* zjhybg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zjhybg.png; path = ../imageSource/zjhybg.png; sourceTree = "<group>"; };
+		18B0F93B17CB0500006CBB1A /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		18B0F93C17CB0500006CBB1A /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		18C8ACE6179E279800398C0E /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		18C8ACE7179E279800398C0E /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -596,9 +596,9 @@
 		189E4F50179F669900717787 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				18B0F93B17CB0500006CBB1A /* SVProgressHUD.h */,
+				18B0F93C17CB0500006CBB1A /* SVProgressHUD.m */,
 				182CF48617C5D7F100DA8C05 /* MMProgress */,
-				18A457AE17B374990080ACFB /* SVProgressHUD.h */,
-				18A457AF17B374990080ACFB /* SVProgressHUD.m */,
 				1862A65517AFA6A1006CBBE4 /* TLAlertView.h */,
 				1862A65617AFA6A1006CBBE4 /* TLAlertView.m */,
 				18A4855D17A9FBB400FA91A2 /* MBProgressHUD.h */,
@@ -904,7 +904,6 @@
 				18A4855F17A9FBB400FA91A2 /* MBProgressHUD.m in Sources */,
 				1862A65717AFA6A2006CBBE4 /* TLAlertView.m in Sources */,
 				18A457AC17B3430D0080ACFB /* HelpDoc.m in Sources */,
-				18A457B017B374990080ACFB /* SVProgressHUD.m in Sources */,
 				182CF49817C5D83500DA8C05 /* MMVectorImage.m in Sources */,
 				182CF49917C5D83500DA8C05 /* MMProgressHUD.m in Sources */,
 				182CF49A17C5D83500DA8C05 /* MMProgressHUDOverlayView.m in Sources */,
@@ -914,6 +913,7 @@
 				182CF49E17C5D83600DA8C05 /* MMHud.m in Sources */,
 				182CF49F17C5D83600DA8C05 /* MMProgressHUDWindow.m in Sources */,
 				182CF4A017C5D83600DA8C05 /* MMProgressHUDViewController.m in Sources */,
+				18B0F93D17CB0500006CBB1A /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
