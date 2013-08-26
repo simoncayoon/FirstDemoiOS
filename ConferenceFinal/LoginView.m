@@ -18,13 +18,11 @@
 
 @implementation LoginView
 
-@synthesize usrName = _usrName;
-@synthesize paswrd = _paswrd;
+@synthesize usrName;
+@synthesize paswrd;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    [_usrname setEnabled:NO];
-    [_paswrd setEnabled:NO];
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -35,6 +33,8 @@
 
 - (void)viewDidLoad
 {
+    [usrName setEnabled:NO];
+    [paswrd setEnabled:NO];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

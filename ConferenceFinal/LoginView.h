@@ -10,10 +10,6 @@
 #import "MainTabCtl.h"
 
 @interface LoginView : UIViewController
-{
-    UITextField *_usrname;
-    UITextField *_paswrd;
-}
 
 
 @property (weak, nonatomic) IBOutlet UITextField *usrName;
